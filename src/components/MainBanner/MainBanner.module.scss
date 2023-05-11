@@ -1,0 +1,49 @@
+@import "../../styles/CommonVar.module.scss";
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.wrapper {
+    margin-bottom: $m108;
+    background-image: url(../../assets/main-banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.height {
+    height: 695px;
+}
+
+.text {
+    color: $white-color;
+    font-family: $font-heading;
+}
+
+.title {
+    font-size: $font-size-42;
+    font-weight: $font-weight-700;
+    padding-top: $m108;
+    line-height: 130%;
+    margin: 0;
+}
+
+.place {
+    font-size: $font-size-22;
+    font-weight: $font-weight-500;
+    padding-top: 24px;
+    line-height: 130%;
+    margin: 0;
+}
+
+.slogan {
+    float: right;
+    padding-top: 332px;
+    font-size: 54px;
+    font-weight: $font-weight-600;
+    letter-spacing: 0.03em;
+    line-height: 130%;
+    margin: 0;
+}

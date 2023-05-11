@@ -1,0 +1,33 @@
+@import "../../../styles/CommonVar.module.scss";
+
+.mainMenu {
+    column-gap: $m96;
+    font-family: $font-basic;
+    font-weight: $font-weight-400;
+    font-size: $font-size-18;
+    line-height: $line-height-130;
+    list-style: none;
+    a {
+        color: $text-color;
+        text-decoration: none;
+    }
+
+    a:hover {
+        transition: 0.3s ease;
+        color: $orange-color;
+    }
+}
+
+.mainMenu__itemActive a {
+    color: $orange-color;
+}
+
+.mainMenu__action {
+    display: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
