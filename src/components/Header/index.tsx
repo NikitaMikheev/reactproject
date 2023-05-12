@@ -1,7 +1,7 @@
 import React from "react";
-import { Logotype } from "./Logo";
+import { Logotype } from "../Logo";
 import { Time } from "./TimePic";
-import { MainMenu } from "./MainMenu";
+import { MainMenu } from "../MainMenu";
 import { Button } from "../Button";
 import styles from "./Header.module.scss"
 import * as stylesBtn from "../Button/Button.module.scss"

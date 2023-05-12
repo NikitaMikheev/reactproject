@@ -5,6 +5,7 @@ import { Advantages } from './components/Advantages';
 import { Schemwork } from './components/Schemwork';
 import { Calculator } from './components/Calculator';
 import { BotBanner } from './components/BotBanner';
+import { Footer } from './components/Footer';
 import styles from './App.module.scss'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Schemwork/>
         <Calculator/>
         <BotBanner/>
+        <Footer/>
       </div>
 
     </div>

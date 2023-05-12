@@ -1,0 +1,72 @@
+@import "../../styles/CommonVar.module.scss";
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    margin-top: $m36;
+}
+
+.wrapper {
+    background-color: #0329408a;
+}
+
+.top__part {
+    padding-top: 46px;
+}
+
+.bot__part {
+    padding-top: $m12;
+    padding-bottom: 46px;
+}
+
+a {
+    color: $white-color;
+}
+
+.text {
+    margin-bottom: 0;
+    font-family: $font-basic;
+    font-weight: $font-weight-300;
+    font-size: $font-size-16;
+    line-height: $line-height-130;
+    color: $white-color;
+}
+
+.link {
+    font-family: $font-basic;
+    font-weight: $font-weight-300;
+    font-size: $font-size-16;
+    line-height: $line-height-130;
+    color: $blue-color;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: $white-color;
+}
+
+.number {
+    margin-left: $m36;
+    font-family: $font-basic;
+    font-size: $font-size-18;
+    line-height: $line-height-130;
+    color: $white-color;
+}
+
+.icons svg:hover {
+    transform: scale(1.5);
+    transition: 0.3s ease;
+}
+
+.icons {
+    gap: 36px;
+}
