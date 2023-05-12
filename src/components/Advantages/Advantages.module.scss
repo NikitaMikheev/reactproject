@@ -1,0 +1,30 @@
+@import "../../styles/CommonVar.module.scss";
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.advantages {
+    margin-bottom: $m108;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: $m72;
+    font-family: $font-heading;
+    font-style: normal;
+    line-height: $line-height-130;
+    color: $text-color;
+    font-size: $font-size-32;
+    font-weight: $font-weight-600;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: $m36;
+    padding-bottom: 24px;
+    z-index: -1;
+}

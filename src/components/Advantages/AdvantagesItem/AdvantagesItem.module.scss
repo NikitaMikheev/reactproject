@@ -1,0 +1,48 @@
+@import "../../../styles/CommonVar.module.scss";
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic {
+    display: block;
+}
+
+.bot__block {
+    height: 60px;
+    background-color: $orange-color;
+}
+
+.text {
+    margin: 0;
+    font-size: $font-size-16;
+    font-weight: $font-weight-300;
+    text-align: center;
+}
+
+.item {
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    left: 0;
+    bottom: 0px;
+    border-bottom: 3px solid $blue-color;
+    transition: width 0.3s ease;
+}
+
+.item:hover {
+    color: $blue-color;
+    transform: scale(1.05);
+    cursor: default;
+}
+
+.item:hover::after {
+    width: 100%;
+}
