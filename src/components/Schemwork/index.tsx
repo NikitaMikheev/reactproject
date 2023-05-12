@@ -4,7 +4,7 @@ import styles from "./Schemwork.module.scss"
 
 export const Schemwork = () => {
     return (
-        <div className={styles.schemwork}>
+        <div className={styles.schemework}>
         <div className={styles.container}>
             <div className={styles.wrapper}>
                 <div className={`${styles.figure} ${styles.ellypse}`}>

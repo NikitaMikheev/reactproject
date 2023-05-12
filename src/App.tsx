@@ -3,6 +3,8 @@ import { Header } from './components/Header';
 import { MainBanner } from './components/MainBanner';
 import { Advantages } from './components/Advantages';
 import { Schemwork } from './components/Schemwork';
+import { Calculator } from './components/Calculator';
+import { BotBanner } from './components/BotBanner';
 import styles from './App.module.scss'
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
         <MainBanner/>
         <Advantages/>
         <Schemwork/>
+        <Calculator/>
+        <BotBanner/>
       </div>
 
     </div>

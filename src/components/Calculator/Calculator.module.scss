@@ -1,0 +1,136 @@
+@import "../../styles/CommonVar.module.scss";
+
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculator {
+    margin-bottom: $m108;
+}
+.wrapper {
+    background-color: $orange-color;
+}
+
+.pos {
+    margin-bottom: 48px;
+    border: 4px solid $blue-color;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.title {
+    margin-top: 0;
+    padding-top: 48px;
+    margin-bottom: $m72;
+    font-family: $font-heading;
+    font-style: normal;
+    line-height: $line-height-130;
+    color: $text-color;
+    font-size: $font-size-32;
+    font-weight: $font-weight-600;
+}
+
+.selector {
+    background-color: $blue-color;
+    color: $white-color;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.selector:focus {
+    outline: none;
+}
+
+.layer {
+    font-size: $font-size-22;
+    font-weight: $font-weight-500;
+    padding-left: 12px;
+}
+
+.sqr {
+    font-size: $font-size-22;
+    font-weight: $font-weight-500;
+    padding-top: 120px;
+    padding-left: 12px;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 48px;
+    padding-left: 12px;
+}
+
+.slider__pos {
+    position: relative;
+    background-color: $orange-color;
+    border-radius: 8px;
+    width: 610px;
+    height: 24px;
+}
+
+output {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    padding: 8px;
+    background-color: $blue-color;
+    color: var(--white-color);
+    border-radius: 8px 8px 0px 8px;
+}
+
+.range {
+    position: relative;
+    width: 400px;
+    height: 10px;
+    left: 3px;
+    background-color: $blue-color;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $blue-color;
+}
+
+.result {
+    width: 530px;
+    border-left: 2px solid black;
+    box-sizing: border-box;
+}
+
+.cost {
+    font-size: 140px;
+    background-color: $orange-color;
+    color: $text-color;
+    border: 0;
+    width: 500px;
+    height: 400px;
+}
+
+.cost__text {
+    font-size: $font-size-22;
+    font-weight:  $font-weight-500;
+    padding-left: 12px;
+}
+
+.cost:focus {
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
