@@ -11,34 +11,44 @@ export const Register = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [age, setAge] = useState("");
+    const [city, setCity] = useState("");
 
     interface DataType {
-        name: string,
-        surname: string,
-        email: string,
-        password: string,
-        confirmPassword: string,
-        age: number
+        userName: string,
+        userLastName: string,
+        userEmail: string,
+        userPass: string,
+        userPassConfm: string,
+        userAge: number,
+        userCity: string
     }
     const response: DataType = {
-        name: "",
-        surname: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
-        age: 0
+        userName: "",
+        userLastName: "",
+        userEmail: "",
+        userPass: "",
+        userPassConfm: "",
+        userAge: 0,
+        userCity: ""
     }
 
-    const onSubmitHandler = (event: React.FormEvent) => {
+    const onSubmitHandler = async (event: React.FormEvent) => {
         event.preventDefault();
-        response.name = name;
-        response.surname = surname;
-        response.email = email;
-        response.password = password;
-        response.confirmPassword = confirmPassword;
-        response.age = Number(age);
-
-        axios.post('http://localhost:8000/register', response);
+        response.userName = name;
+        response.userLastName = surname;
+        response.userEmail = email;
+        response.userPass = password;
+        response.userPassConfm = confirmPassword;
+        response.userAge = Number(age);
+        response.userCity = city;
+        
+        await axios.post('http://localhost:8000/register', response)
+        .then(res => {
+            console.log("Success")
+        })
+        .catch(error => {
+          console.log(error)
+        });
     }
 
     const inputChangeHandler = (setFunction: React.Dispatch<React.SetStateAction<string>>, event: React.ChangeEvent<HTMLInputElement>) => {
@@ -68,6 +78,9 @@ export const Register = () => {
                     </div>
                     <div className="form__field">
                         <input type="number" name="age" className={styles.input__field} onChange={(e)=>inputChangeHandler(setAge, e)} placeholder="Введите возраст *" required/>
+                    </div>
+                    <div className="form__field">
+                        <input type="text" name="city" className={styles.input__field} onChange={(e)=>inputChangeHandler(setCity, e)} placeholder="Введите город *" required/>
                     </div>
                     <div className={`${styles.footer} ${styles.flex}`}>
                         <span className="span main-text">Регистрируясь, Вы соглашаетесь с <a href="404.html">политикой конфиденциальности</a></span>
