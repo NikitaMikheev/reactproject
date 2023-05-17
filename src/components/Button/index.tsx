@@ -10,6 +10,6 @@ interface TProps {
 
 export const Button = (props: TProps) => {
     return (
-        <a className={`${styles.button} ${props.btn.type} ${props.btn.color} modal--open`} href="#!">Регистрация</a>
+        <a className={`${styles.button} ${props.btn.type} ${props.btn.color} modal--open`} href="/register">Регистрация</a>
     )
 }

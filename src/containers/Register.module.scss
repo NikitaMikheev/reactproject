@@ -1,0 +1,103 @@
+@import "../styles/CommonVar.module.scss";
+
+.reg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: none;
+    z-index: 10000;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapp {
+    margin: auto;
+    padding: 24px 0;
+    max-width: 800px;
+    max-height: 859px;
+    background: $blue-color;
+    color: $white-color;
+    box-shadow: 0 5px 15px #0c0c0c;
+}
+
+.form {
+    margin: auto;
+    max-width: 590px;
+}
+
+.form p {
+    margin-bottom: $m12;
+}
+
+.title {
+    margin-bottom: $m36;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: $line-height-130;
+}
+
+.input__field {
+    margin-bottom: $m24;
+    padding-left: 24px;
+    width: 100%;
+    height: 50px;
+    text-align: start;
+    border: none;
+    background: #e7e7e7;
+    box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.input__field [placeholder] {
+    color: rgba(1, 1, 1, 0.5);
+}
+
+.textarea {
+    padding-top: 12px;
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer .span {
+    display: block;
+    margin-bottom: $m24;
+    color: $white-color;
+    text-align: start;
+}
+
+.footer .span a {
+    color: #ff7113d5;
+}
+
+.submit:hover {
+    background-color: #ff7113d5;
+    transition: 0.3s ease;
+}
+
+.button {
+    padding: 15px 76px 16px 76px;
+    font-family: $font-basic;
+    font-style: normal;
+    font-weight: $font-weight-500;
+    font-size: $font-size-16;
+    line-height: $line-height-130;
+    color: $white-color;
+    border: none;
+    cursor: pointer;
+}
+
+.primary {
+    background: $orange-color;
+}
