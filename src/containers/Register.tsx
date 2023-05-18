@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setUserData } from "../store/userData";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
 const dispatch = useDispatch();
@@ -34,7 +34,7 @@ const dispatch = useDispatch();
         userAge: 0,
         userCity: ""
     }
-
+    const navigate = useNavigate();
     const onSubmitHandler = async (event: React.FormEvent) => {
         event.preventDefault();
         response.userName = name;
@@ -48,7 +48,7 @@ const dispatch = useDispatch();
         await axios.post('http://localhost:8000/register', response)
         .then(res => {
             console.log("Success");
-            <Link to={"/"}/>
+            navigate('/');
             dispatch(setUserData({accessToken: res.data.accessToken, refreshToken: res.data.refreshToken, email: response.userEmail}))
         })
         .catch(error => {

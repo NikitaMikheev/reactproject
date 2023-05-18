@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setUserData } from "../store/userData";
+import { useNavigate } from "react-router-dom";
 
 export const Authentication = () => {
 const dispatch = useDispatch();
@@ -11,23 +12,25 @@ const dispatch = useDispatch();
     const [password, setPassword] = useState("");
 
     interface DataType {
-        userEmail: string,
-        userPass: string,
+        email: string,
+        password: string,
     }
     const response: DataType = {
-        userEmail: "",
-        userPass: "",
+        email: "",
+        password: "",
     }
 
+    const navigate = useNavigate();
     const onSubmitHandler = async (event: React.FormEvent) => {
         event.preventDefault();
-        response.userEmail = email;
-        response.userPass = password;
+        response.email = email;
+        response.password = password;
         
         await axios.post('http://localhost:8000/authentication', response)
         .then(res => {
             console.log("Success");
-            dispatch(setUserData({accessToken: res.data.accessToken, refreshToken: res.data.refreshToken, email: response.userEmail}))
+            navigate('/');
+            dispatch(setUserData({accessToken: res.data.accessToken, refreshToken: res.data.refreshToken, email: response.email}))
         })
         .catch(error => {
           console.log(error)
