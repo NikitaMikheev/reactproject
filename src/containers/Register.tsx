@@ -2,9 +2,12 @@ import React from "react";
 import styles from "./Register.module.scss"
 import { useState } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { setUserData } from "../store/userData";
+import { Link } from "react-router-dom";
 
 export const Register = () => {
-
+const dispatch = useDispatch();
     const [name, setName] =  useState("");
     const [surname, setSurname] = useState("");
     const [email, setEmail] = useState("");
@@ -44,7 +47,9 @@ export const Register = () => {
         
         await axios.post('http://localhost:8000/register', response)
         .then(res => {
-            console.log("Success")
+            console.log("Success");
+            <Link to={"/"}/>
+            dispatch(setUserData({accessToken: res.data.accessToken, refreshToken: res.data.refreshToken, email: response.userEmail}))
         })
         .catch(error => {
           console.log(error)
