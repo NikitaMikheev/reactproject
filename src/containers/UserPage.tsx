@@ -32,7 +32,11 @@ const dispatch = useDispatch();
         await axios.post('http://localhost:8000/authentication/refresh', userToken)
         .then(res => {
             dispatch(setUserData({accessToken: res.data.accessToken, refreshToken: res.data.refreshToken, email: email}))
-            // requestAPI(response);
+            requestAPI(response);
+
+            localStorage.setItem('email', email );
+            localStorage.setItem('accessToken', res.data.accessToken );
+            localStorage.setItem('refreshToken', res.data.refreshToken);
         })
         .catch(error => {
           navigate('/login');

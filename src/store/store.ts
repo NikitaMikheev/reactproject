@@ -5,7 +5,7 @@ export const store = configureStore({
     reducer: {
         [userDataNameReducer]: userDataReducer
     },
-    devTools: true
+    devTools: true,
 });
 
 export type TState=ReturnType<typeof store.getState>

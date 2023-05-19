@@ -31,6 +31,10 @@ export const Button = (props: TProps) => {
                 console.log("Success");
                 navigate('/');
                 dispatch(setUserData({accessToken: "", refreshToken: "", email: ""}))
+
+                localStorage.setItem('email', "" );
+                localStorage.setItem('accessToken', "");
+                localStorage.setItem('refreshToken', "");
             })
             .catch(error => {
               console.log(error)

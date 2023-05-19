@@ -49,7 +49,11 @@ const dispatch = useDispatch();
         .then(res => {
             console.log("Success");
             navigate('/');
-            dispatch(setUserData({accessToken: res.data.accessToken, refreshToken: res.data.refreshToken, email: response.userEmail}))
+            dispatch(setUserData({accessToken: res.data.accessToken, refreshToken: res.data.refreshToken, email: response.userEmail}));
+                        
+            localStorage.setItem('email', response.userEmail );
+            localStorage.setItem('accessToken', res.data.accessToken );
+            localStorage.setItem('refreshToken', res.data.refreshToken);
         })
         .catch(error => {
           console.log(error)
