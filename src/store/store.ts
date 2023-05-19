@@ -6,6 +6,13 @@ export const store = configureStore({
         [userDataNameReducer]: userDataReducer
     },
     devTools: true,
+    preloadedState: {
+        userData: {
+            email: String(localStorage.getItem('email')),
+            accessToken: String(localStorage.getItem('accessToken')),
+            refreshToken: String(localStorage.getItem('refreshToken'))
+        }
+    }
 });
 
 export type TState=ReturnType<typeof store.getState>
