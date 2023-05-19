@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./MainMenu.module.scss"
+import { Link } from "react-router-dom";
 
 export const MainMenu = () => {
     return (
@@ -9,6 +10,7 @@ export const MainMenu = () => {
                 <li className="mainMenu__item"><a href="about.html">О&nbsp;нас</a></li>
                 <li className="mainMenu__item"><a href="our_works.html">Наши&nbsp;работы</a></li>
                 <li className="mainMenu__item"><a href="faq.html">Вопрос&nbsp;-&nbsp;Ответ</a></li>
+                <li className="mainMenu__item"><Link to={"/user"}>Получить пользователя</Link></li>
             </ul>
         </nav>
     );
